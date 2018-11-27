@@ -18,14 +18,20 @@ import com.itextpdf.tool.xml.pipeline.html.LinkProvider;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
-//https://stackoverflow.com/questions/46791708/convert-html-with-images-to-pdf-using-itext
+// https://stackoverflow.com/questions/46791708/convert-html-with-images-to-pdf-using-itext
+// https://developers.itextpdf.com/question/how-add-external-css-while-generating-pdf
 public class ConvertHtmlToPdf {
     public static final String HTML = "C:\\Users\\zzz\\Desktop\\itext\\index.html";
     public static final String DEST = "C:\\Users\\zzz\\Desktop\\itext\\index.pdf";
     public static final String IMG_PATH = "C:\\Users\\zzz\\Desktop\\itext\\";
     public static final String RELATIVE_PATH = "C:\\Users\\zzz\\Desktop\\itext\\";
     public static final String CSS_DIR = "C:\\Users\\zzz\\Desktop\\itext\\";
+
+    private List<String> cssDir = new ArrayList<String>();
+
 
     /**
      * Creates a PDF with the words "Hello World"
